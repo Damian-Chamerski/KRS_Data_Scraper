@@ -1,0 +1,6 @@
+{
+  "Name": "KRS_Data_Scraper",
+  "ProjectType": "Process",
+  "Description": "Downloading data from the KRS website based on the KRS number.",
+  "MainFile": "Main.xaml"
+}
