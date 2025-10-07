@@ -1,6 +1,6 @@
 <Activity mc:Ignorable="sap sap2010" x:Class="GetDataFromApiKRS" this:GetDataFromApiKRS.in_TransactionItem="0000142065" this:GetDataFromApiKRS.in_strBaseRequestUrl="https://api-krs.ms.gov.pl/api/krs/OdpisAktualny/{krs}?rejestr=PS&amp;format=json" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uwah="clr-namespace:UiPath.Web.Activities.Http;assembly=UiPath.Web.Activities" xmlns:uwahm="clr-namespace:UiPath.Web.Activities.Http.Models;assembly=UiPath.Web.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
-    <x:Property Name="out_jsonResponseContent" Type="InArgument(njl:JObject)" />
+    <x:Property Name="out_jsonResponseContent" Type="OutArgument(njl:JObject)" />
     <x:Property Name="in_TransactionItem" Type="InArgument(x:String)" />
     <x:Property Name="in_strBaseRequestUrl" Type="InArgument(x:String)" />
   </x:Members>
@@ -117,7 +117,7 @@
       <AssemblyReference>System.Collections.Specialized</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="GetDataFromApiKRS" sap:VirtualizedContainerService.HintSize="1281,2713" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="GetDataFromApiKRS" sap:VirtualizedContainerService.HintSize="1277,2713" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="str_RequestURL" />
       <Variable x:TypeArguments="uwahm:HttpResponseSummary" Name="http_ResponseContent" />
@@ -160,7 +160,7 @@
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:LogMessage DisplayName="Log Message - http_ResponseContent.TextContent" sap:VirtualizedContainerService.HintSize="416,175" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="Info" Message="[http_ResponseContent.TextContent]" />
+          <ui:LogMessage DisplayName="Log Message - Default" sap:VirtualizedContainerService.HintSize="416,175" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="Info" Message="[http_ResponseContent.TextContent]" />
           <Throw Exception="[new SystemException(&quot;Api response code: &quot;+str_ResponseCode+&quot;. Unknown error&quot;)]" sap:VirtualizedContainerService.HintSize="416,114" sap2010:WorkflowViewState.IdRef="Throw_4" />
         </Sequence>
       </Switch.Default>
@@ -179,7 +179,7 @@
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,175" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[http_ResponseContent.TextContent]" />
+        <ui:LogMessage DisplayName="Log Message - BadRequest" sap:VirtualizedContainerService.HintSize="416,175" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[http_ResponseContent.TextContent]" />
         <Throw Exception="[new SystemException(&quot;Api response code: BadRequest. Propably wrong request&quot;)]" sap:VirtualizedContainerService.HintSize="416,114" sap2010:WorkflowViewState.IdRef="Throw_1" />
       </Sequence>
       <Sequence x:Key="NotFound" DisplayName="Body" sap:VirtualizedContainerService.HintSize="450,524" sap2010:WorkflowViewState.IdRef="Sequence_5">
@@ -188,7 +188,7 @@
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,175" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Info" Message="[http_ResponseContent.TextContent]" />
+        <ui:LogMessage DisplayName="Log Message - NotFound" sap:VirtualizedContainerService.HintSize="416,175" sap2010:WorkflowViewState.IdRef="LogMessage_7" Level="Info" Message="[http_ResponseContent.TextContent]" />
         <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,175" sap2010:WorkflowViewState.IdRef="LogMessage_8" Level="Warn" Message="[&quot;Api response code: NotFound. Propably data not found&quot;]" />
         <Throw Exception="[new BusinessRuleException(&quot;Api response code: NotFound. Propably data not found&quot;)]" sap:VirtualizedContainerService.HintSize="416,114" sap2010:WorkflowViewState.IdRef="Throw_2" />
       </Sequence>
