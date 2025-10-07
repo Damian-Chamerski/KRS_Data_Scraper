@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Wyszukiwanie podmiotów …",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Id": "tATtpG9-1E-5y8MnMG4lkw",
+  "Reference": "HoX7rVbag0efgGIncpMW4g/tATtpG9-1E-5y8MnMG4lkw",
+  "ParentRef": "HoX7rVbag0efgGIncpMW4g/SIl7J9WluU-TgaV3HEHSxg",
+  "Created": "2025-10-07T17:43:47.968046Z",
+  "Updated": "2025-10-07T17:43:47.968046Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.15.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

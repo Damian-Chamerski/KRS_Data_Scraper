@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="F3w_QeRRDk-f_c7jtUmJJA" Reference="HoX7rVbag0efgGIncpMW4g/JmoQaydEG0SAw_i5Iq2svA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="krz.ms.gov.pl" DesignTimeRectangle="1795, 735, 89, 30" ElementType="Text" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl tag='IFRAME' /&gt;&lt;webctrl parentid='butoonWyszukajMobile' tag='SPAN' type='' class='ui-button-text ui-clickable' aaname='Wyszukaj' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Wyszukaj' /&gt;" Guid="a6189232-34a3-4005-bb3c-eab93916b023" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Portal publiczny KRZ - Wyszukiwanie podmiotów' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="0bf786275fd3a7b2071e821dccc7b79d.png" xmlns="">0KfRlBaVTo0OSEx9b4jDTeg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

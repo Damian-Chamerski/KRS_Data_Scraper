@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Identyfikator (KRS, NIP…",
+  "Type": "Element",
+  "TaxonomyType": "Input",
+  "Id": "rAZdeSl3C06_kTVvWiHtYw",
+  "Reference": "HoX7rVbag0efgGIncpMW4g/rAZdeSl3C06_kTVvWiHtYw",
+  "ParentRef": "HoX7rVbag0efgGIncpMW4g/SIl7J9WluU-TgaV3HEHSxg",
+  "Created": "2025-10-07T17:59:27.1613624Z",
+  "Updated": "2025-10-07T17:59:27.1613624Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.15.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

@@ -115,7 +115,7 @@
       <AssemblyReference>System.Data.Common</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Invoke major steps of the business process, which are usually implemented by multiple subworkflows.&#xA;&#xA;If a BusinessRuleException is thrown, the transaction is skipped. &#xA;If another kind of exception occurs, the current transaction can be retried. " DisplayName="Process" sap:VirtualizedContainerService.HintSize="1277,977" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Invoke major steps of the business process, which are usually implemented by multiple subworkflows.&#xA;&#xA;If a BusinessRuleException is thrown, the transaction is skipped. &#xA;If another kind of exception occurs, the current transaction can be retried. " DisplayName="Process" sap:VirtualizedContainerService.HintSize="1065,1154" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="njl:JObject" Name="json_ResponseContent" />
     </Sequence.Variables>
@@ -165,11 +165,17 @@
         </Sequence>
       </TryCatch.Finally>
     </TryCatch>
-    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="PrepareDataFromApi - Invoke Workflow File (Framework\Process\PrepareDataFromApi.xaml)" sap:VirtualizedContainerService.HintSize="452,168" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Framework\Process\PrepareDataFromApi.xaml">
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="PrepareDataFromApi - Invoke Workflow File (Framework\Process\PrepareDataFromApi.xaml)" sap:VirtualizedContainerService.HintSize="452,177" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Framework\Process\PrepareDataFromApi.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="njl:JObject" x:Key="in_jsonResponseContent">[json_ResponseContent]</InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="in_TransactionItem">[in_TransactionItem]</InArgument>
         <InOutArgument x:TypeArguments="sd:DataTable" x:Key="io_dtKRSFinalTable">[io_dtKRSFinalTable]</InOutArgument>
+      </ui:InvokeWorkflowFile.Arguments>
+    </ui:InvokeWorkflowFile>
+    <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="GetDataFromKRZWebsite - Invoke Workflow File (Framework\Process\GetDataFromKRZWebsite.xaml)" sap:VirtualizedContainerService.HintSize="452,168" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="Framework\Process\GetDataFromKRZWebsite.xaml">
+      <ui:InvokeWorkflowFile.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="in_strKRZWebsiteUrl">[in_Config("KRZWebsiteUrl").ToString]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_TransactionItem">[in_TransactionItem]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
   </Sequence>

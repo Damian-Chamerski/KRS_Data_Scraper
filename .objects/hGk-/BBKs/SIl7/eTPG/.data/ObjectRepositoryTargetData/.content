@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="hnK2XZ6IUUiYkyzK3f0tBg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="krz.ms.gov.pl" DesignTimeRectangle="326, 807, 429, 20" ElementType="Text" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl tag='IFRAME' /&gt;&lt;webctrl aria-role='alert' tag='SPAN' type='' class='ui-messages-detail ng-tns-c61-7 ng-star-inserted' aaname='Nie zostały znalezione żadne pozycje dla podanych kryteriów wyszukiwania.' matching:aria-role='fuzzy' fuzzylevel:aria-role='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' check:innerText='Nie zostały znalezione żadne pozycje dla podanych kryteriów wyszukiwania.' /&gt;" Guid="6b45639e-78b3-4371-b968-e9c2d8016f81" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Portal publiczny KRZ - Wyszukiwanie podmiotów' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="cb44268b752008f80654ec29649c9a1c.png" xmlns="">0kVxGGkjIBUWVZpqV-5JNcA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">CheckState</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

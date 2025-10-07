@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Wyszukaj",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Id": "JmoQaydEG0SAw_i5Iq2svA",
+  "Reference": "HoX7rVbag0efgGIncpMW4g/JmoQaydEG0SAw_i5Iq2svA",
+  "ParentRef": "HoX7rVbag0efgGIncpMW4g/SIl7J9WluU-TgaV3HEHSxg",
+  "Created": "2025-10-07T18:00:01.9777369Z",
+  "Updated": "2025-10-07T18:00:01.9777369Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=25.10.15.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.10.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

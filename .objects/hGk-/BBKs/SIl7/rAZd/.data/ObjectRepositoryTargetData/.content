@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="YUEZi5onmESRugGB0-8eEQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="krz.ms.gov.pl" DesignTimeRectangle="302, 669, 513, 32" ElementType="InputBox" ElementVisibilityArgument="Interactive" FuzzySelectorArgument="&lt;webctrl tag='IFRAME' /&gt;&lt;webctrl id='inny_id' tag='INPUT' type='text' class='ui-inputtext ui-corner-all ui-state-default ui-widget ng-untouched ng-pristine ng-valid' aaname='Identyfikator (KRS, NIP lub inny identyfikator)' matching:id='fuzzy' fuzzylevel:id='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' /&gt;" Guid="e25229f6-0912-4fbb-b110-007eb1d7290c" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Portal publiczny KRZ - Wyszukiwanie podmiotów' /&gt;" SearchSteps="FuzzySelector" Version="V6" WaitForReadyArgument="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target DesignTimeRectangle="302, 643, 513, 20" ElementType="Text" FuzzySelectorArgument="&lt;webctrl tag='IFRAME' /&gt;&lt;webctrl aaname='Identyfikator (KRS, NIP lub inny identyfikator)' tag='LABEL' type='' class='control-label' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' check:innerText='Identyfikator (KRS, NIP lub inny identyfikator)' /&gt;" Guid="6392b8ac-2af0-448a-8f32-969648566a1f" SearchSteps="FuzzySelector" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="103e6681e11f3f1a593d4a6cac2c73ba.png" xmlns="">0PeFla2LAKE-YsGWxrV_Z-w</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">TypeInto</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>
