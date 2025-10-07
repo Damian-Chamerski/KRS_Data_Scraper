@@ -127,7 +127,7 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:LogMessage DisplayName="Log Message Process Start" sap:VirtualizedContainerService.HintSize="452,175" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Started Process&quot;]" />
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="452,761" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Catch - Business" sap:VirtualizedContainerService.HintSize="452,761" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <TryCatch.Try>
         <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="GetDataFromApiKRS - Invoke Workflow File (Framework\Process\GetDataFromApiKRS.xaml)" sap:VirtualizedContainerService.HintSize="450,145" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Framework\Process\GetDataFromApiKRS.xaml">
           <ui:InvokeWorkflowFile.Arguments>
@@ -150,8 +150,8 @@
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{in_TransactionItem,&quot;Nie istnieje&quot;,&quot;Nie istnieje&quot;,&quot;Nie istnieje&quot;,&quot;Nie istnieje&quot;,&quot;Nie istnieje&quot;,&quot;Nie istnieje&quot;,&quot;Nie istnieje&quot;,&quot;Nie istnieje&quot;,&quot;Nie istnieje&quot;,&quot;Nie istnieje&quot;}]" DataTable="[io_dtFinalTable]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="416,221" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
-              <Throw Exception="[new BusinessRuleException(&quot;The KRS number is incorrect&quot;)]" sap:VirtualizedContainerService.HintSize="416,114" sap2010:WorkflowViewState.IdRef="Throw_1" />
+              <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{in_TransactionItem,&quot;Nie istnieje&quot;,&quot;Nie istnieje&quot;,&quot;Nie istnieje&quot;,&quot;Nie istnieje&quot;,&quot;Nie istnieje&quot;,&quot;Nie istnieje&quot;,&quot;Nie istnieje&quot;,&quot;Nie istnieje&quot;,&quot;Nie istnieje&quot;,&quot;Nie istnieje&quot;}]" DataTable="[io_dtFinalTable]" DisplayName="Add Data Row - Wrong KRS" sap:VirtualizedContainerService.HintSize="416,221" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
+              <Throw DisplayName="Throw - Business" Exception="[new BusinessRuleException(&quot;The KRS number is incorrect&quot;)]" sap:VirtualizedContainerService.HintSize="416,114" sap2010:WorkflowViewState.IdRef="Throw_1" />
             </Sequence>
           </ActivityAction>
         </Catch>

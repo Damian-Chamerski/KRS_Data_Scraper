@@ -105,23 +105,23 @@
       <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="OpenChromeBrowser" sap:VirtualizedContainerService.HintSize="1307,1948" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="OpenChromeBrowser" sap:VirtualizedContainerService.HintSize="1230,1988" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:RetryScope LogRetriedExceptions="{x:Null}" RetriedExceptionsLogLevel="{x:Null}" DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="556,1925" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="3">
+    <ui:RetryScope LogRetriedExceptions="{x:Null}" RetriedExceptionsLogLevel="{x:Null}" DisplayName="Retry Scope - Open Chrome" sap:VirtualizedContainerService.HintSize="556,1965" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="3">
       <ui:RetryScope.ActivityBody>
         <ActivityAction>
-          <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="554,1727" sap2010:WorkflowViewState.IdRef="Sequence_5">
+          <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="554,1767" sap2010:WorkflowViewState.IdRef="Sequence_5">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="520,175" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;Opening chrome...&quot;]" />
-            <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Chrome Portal publiczny KRZ - Strona główna" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="520,1492" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="58c86f49-2bff-4761-bf2a-24464cc7baaa" Version="V2" WindowResize="Maximize">
+            <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Chrome Portal publiczny KRZ - Strona główna" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="520,1532" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="IfNotOpen" ScopeGuid="58c86f49-2bff-4761-bf2a-24464cc7baaa" Version="V2" WindowResize="Maximize">
               <uix:NApplicationCard.Body>
                 <ActivityAction x:TypeArguments="x:Object">
                   <ActivityAction.Argument>
@@ -133,7 +133,7 @@
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <Delay Duration="00:00:01" sap:VirtualizedContainerService.HintSize="452,123" sap2010:WorkflowViewState.IdRef="Delay_2" />
+                    <Delay DisplayName="Delay - Open Chrome" Duration="00:00:01" sap:VirtualizedContainerService.HintSize="452,123" sap2010:WorkflowViewState.IdRef="Delay_2" />
                     <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Wyszukiwanie podmiotów …'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="452,227" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="SameAsCard" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="58c86f49-2bff-4761-bf2a-24464cc7baaa" Version="V5">
                       <uix:NClick.Target>
                         <uix:TargetAnchorable BrowserURL="krz.ms.gov.pl" ContentHash="G8QKQiMB3kSFowGXl2jAuQ" DesignTimeRectangle="643, 555, 248, 81" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl tag='IFRAME' /&gt;&lt;webctrl aaname='Wyszukiwanie podmiotów i przeglądanie postępowań' tag='P' /&gt;" Guid="d47c7a0a-6924-49a6-819c-0742b694b506" InformativeScreenshot="8ca3d2c66c61e71fe8c132bba70284cc.png" Reference="HoX7rVbag0efgGIncpMW4g/tATtpG9-1E-5y8MnMG4lkw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Portal publiczny KRZ - Strona główna' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive" />
@@ -169,7 +169,7 @@
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                           <uix:NWindowOperation DisplayName="Window Operation - Close window" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,179" sap2010:WorkflowViewState.IdRef="NWindowOperation_1" Operation="Close" ScopeIdentifier="58c86f49-2bff-4761-bf2a-24464cc7baaa" Version="V5" />
-                          <Throw Exception="[new SystemException(&quot;The browser did not open correctly&quot;)]" sap:VirtualizedContainerService.HintSize="416,114" sap2010:WorkflowViewState.IdRef="Throw_1" />
+                          <Throw DisplayName="Throw - System" Exception="[new SystemException(&quot;The browser did not open correctly&quot;)]" sap:VirtualizedContainerService.HintSize="416,114" sap2010:WorkflowViewState.IdRef="Throw_1" />
                         </Sequence>
                       </uix:NCheckState.IfNotExists>
                       <uix:NCheckState.Target>

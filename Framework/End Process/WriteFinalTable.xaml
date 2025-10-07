@@ -145,7 +145,7 @@
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="575,175" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Writing Final Table to Excel...&quot;]" />
-    <Assign sap:VirtualizedContainerService.HintSize="575,175" sap2010:WorkflowViewState.IdRef="Assign_3">
+    <Assign DisplayName="Assign - str_FinalExcelFilePath" sap:VirtualizedContainerService.HintSize="575,175" sap2010:WorkflowViewState.IdRef="Assign_3">
       <Assign.To>
         <OutArgument x:TypeArguments="x:String">[str_FinalExcelFilePath]</OutArgument>
       </Assign.To>
@@ -153,8 +153,8 @@
         <InArgument x:TypeArguments="x:String">[in_strBaseFinalExcelFilePath.Replace("{data}",Now.ToString("yyyyMMdd_hhmmss"))]</InArgument>
       </Assign.Value>
     </Assign>
-    <ui:CopyFile ContinueOnError="{x:Null}" DestinationResource="{x:Null}" PathResource="{x:Null}" Destination="[str_FinalExcelFilePath]" DisplayName="Copy File" sap:VirtualizedContainerService.HintSize="575,224" sap2010:WorkflowViewState.IdRef="CopyFile_1" Path="[in_strInputExcelFilePath]" />
-    <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="575,1063" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1">
+    <ui:CopyFile ContinueOnError="{x:Null}" DestinationResource="{x:Null}" PathResource="{x:Null}" Destination="[str_FinalExcelFilePath]" DisplayName="Copy File - in_strInputExcelFilePath" sap:VirtualizedContainerService.HintSize="575,224" sap2010:WorkflowViewState.IdRef="CopyFile_1" Path="[in_strInputExcelFilePath]" />
+    <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope - str_FinalExcelFilePath" sap:VirtualizedContainerService.HintSize="575,1063" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_1">
       <ueab:ExcelProcessScopeX.Body>
         <ActivityAction x:TypeArguments="ui:IExcelProcess">
           <ActivityAction.Argument>
@@ -166,7 +166,7 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" SensitivityLabel="{x:Null}" CreateNewFile="False" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="507,884" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" ResizeWindow="None" SensitivityOperation="None" WorkbookPath="[str_FinalExcelFilePath]">
+            <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" SensitivityLabel="{x:Null}" CreateNewFile="False" DisplayName="Use Excel File - str_FinalExcelFilePath" sap:VirtualizedContainerService.HintSize="507,884" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" ResizeWindow="None" SensitivityOperation="None" WorkbookPath="[str_FinalExcelFilePath]">
               <ueab:ExcelApplicationCard.Body>
                 <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
                   <ActivityAction.Argument>
@@ -178,9 +178,9 @@
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ueab:DeleteRowsX RowPositions="{x:Null}" DeleteRowsOption="Visible" DisplayName="Delete Rows" HasHeaders="False" sap:VirtualizedContainerService.HintSize="439,172" sap2010:WorkflowViewState.IdRef="DeleteRowsX_1" Range="[Excel.Sheet(&quot;Dane&quot;).Range(&quot;3:&quot;+Excel.Sheet(&quot;Dane&quot;).RowCount.ToString)]" />
-                    <ueab:WriteRangeX Destination="[Excel.Sheet(&quot;Dane&quot;).Range(&quot;A3&quot;)]" DisplayName="Write DataTable to Excel" ExcludeHeaders="True" sap:VirtualizedContainerService.HintSize="439,193" sap2010:WorkflowViewState.IdRef="WriteRangeX_2" IgnoreEmptySource="False" Source="[in_dtFinalTable]" />
-                    <ueab:FormatRangeX DisplayName="Format Cells" sap:VirtualizedContainerService.HintSize="439,163" sap2010:WorkflowViewState.IdRef="FormatRangeX_1" Range="[Excel.Sheet(&quot;Dane&quot;).Range(&quot;3:&quot;+Excel.Sheet(&quot;Dane&quot;).RowCount.ToString)]">
+                    <ueab:DeleteRowsX RowPositions="{x:Null}" DeleteRowsOption="Visible" DisplayName="Delete Rows - str_FinalExcelFilePath" HasHeaders="False" sap:VirtualizedContainerService.HintSize="439,172" sap2010:WorkflowViewState.IdRef="DeleteRowsX_1" Range="[Excel.Sheet(&quot;Dane&quot;).Range(&quot;3:&quot;+Excel.Sheet(&quot;Dane&quot;).RowCount.ToString)]" />
+                    <ueab:WriteRangeX Destination="[Excel.Sheet(&quot;Dane&quot;).Range(&quot;A3&quot;)]" DisplayName="Write DataTable to Excel - str_FinalExcelFilePath" ExcludeHeaders="True" sap:VirtualizedContainerService.HintSize="439,193" sap2010:WorkflowViewState.IdRef="WriteRangeX_2" IgnoreEmptySource="False" Source="[in_dtFinalTable]" />
+                    <ueab:FormatRangeX DisplayName="Format Cells - str_FinalExcelFilePath" sap:VirtualizedContainerService.HintSize="439,163" sap2010:WorkflowViewState.IdRef="FormatRangeX_1" Range="[Excel.Sheet(&quot;Dane&quot;).Range(&quot;3:&quot;+Excel.Sheet(&quot;Dane&quot;).RowCount.ToString)]">
                       <ueab:FormatRangeX.Alignment>
                         <ui:AlignmentOptions HorizontalAlignment="xlHAlignGeneral" VerticalAlignment="xlVAlignBottom" WrapText="False" />
                       </ueab:FormatRangeX.Alignment>
@@ -210,7 +210,7 @@
         </InArgument>
       </ui:InvokeCode.Arguments>
     </ui:InvokeCode>
-    <ui:WriteTextFile File="{x:Null}" Output="{x:Null}" DisplayName="Write Text File" FileName="[str_FinalExcelFilePath.Replace(&quot;.xlsx&quot;,&quot;.html&quot;)]" sap:VirtualizedContainerService.HintSize="575,176" sap2010:WorkflowViewState.IdRef="WriteTextFile_1" Text="[str_HtmlReport]" />
+    <ui:WriteTextFile File="{x:Null}" Output="{x:Null}" DisplayName="Write Text File - str_HtmlReport" FileName="[str_FinalExcelFilePath.Replace(&quot;.xlsx&quot;,&quot;.html&quot;)]" sap:VirtualizedContainerService.HintSize="575,176" sap2010:WorkflowViewState.IdRef="WriteTextFile_1" Text="[str_HtmlReport]" />
     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="575,166" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;The reports was saved successfully&quot;]" />
   </Sequence>
 </Activity>
