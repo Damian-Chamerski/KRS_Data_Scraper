@@ -130,13 +130,9 @@
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="WriteFinalTable" sap:VirtualizedContainerService.HintSize="1230,2374" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="WriteFinalTable" sap:VirtualizedContainerService.HintSize="1281,2374" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
-      <Variable x:TypeArguments="x:String" Name="str_FinalExcelFilePath">
-        <Variable.Default>
-          <Literal x:TypeArguments="x:String">Data\Output\Raport_20251007_103909.xlsx</Literal>
-        </Variable.Default>
-      </Variable>
+      <Variable x:TypeArguments="x:String" Name="str_FinalExcelFilePath" />
       <Variable x:TypeArguments="x:String" Name="str_HtmlReport" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
@@ -150,7 +146,7 @@
         <OutArgument x:TypeArguments="x:String">[str_FinalExcelFilePath]</OutArgument>
       </Assign.To>
       <Assign.Value>
-        <InArgument x:TypeArguments="x:String">[in_strBaseFinalExcelFilePath.Replace("{data}",Now.ToString("yyyyMMdd_hhmmss"))]</InArgument>
+        <InArgument x:TypeArguments="x:String">[in_strBaseFinalExcelFilePath.Replace("{data}",Now.ToString("yyyyMMdd_HHmmss"))]</InArgument>
       </Assign.Value>
     </Assign>
     <ui:CopyFile ContinueOnError="{x:Null}" DestinationResource="{x:Null}" PathResource="{x:Null}" Destination="[str_FinalExcelFilePath]" DisplayName="Copy File - in_strInputExcelFilePath" sap:VirtualizedContainerService.HintSize="575,224" sap2010:WorkflowViewState.IdRef="CopyFile_1" Path="[in_strInputExcelFilePath]" />
@@ -200,14 +196,10 @@
       </ueab:ExcelProcessScopeX.Body>
     </ueab:ExcelProcessScopeX>
     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="575,175" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Writing Final Table to Html...&quot;]" />
-    <ui:InvokeCode ContinueOnError="{x:Null}" Code="out_strHtmlReport =&#x9;&quot;&lt;html&gt;&lt;head&gt;&lt;style&gt;&quot; + _&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&quot;table {border-collapse: collapse; width: 100%;}&quot; + _&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&quot;th, td {border: 1px solid black; padding: 5px; text-align: left;}&quot; + _&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&quot;th {background-color: #f2f2f2;}&quot; + _&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&quot;#easterEgg {display: none; color: #888; font-style: italic; text-align: center; margin-top: 15px;}&quot; + _&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&quot;body:hover #easterEgg {display: block;}&quot; + _&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&quot;&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&quot;&#xD;&#xA;&#xD;&#xA;out_strHtmlReport += &quot;&lt;h1&gt;&lt;center&gt;Raport&lt;/center&gt;&lt;/h1&gt;&quot;&#xD;&#xA;out_strHtmlReport += &quot;&lt;table&gt;&quot;&#xD;&#xA;&#xD;&#xA;out_strHtmlReport += &quot;&lt;tr&gt;&quot;&#xD;&#xA;For Each col As DataColumn In in_dtFinalTable.Columns&#xD;&#xA;&#x9;out_strHtmlReport += &quot;&lt;th&gt;&quot; + col.ColumnName + &quot;&lt;/th&gt;&quot;&#xD;&#xA;Next&#xD;&#xA;out_strHtmlReport += &quot;&lt;/tr&gt;&quot;&#xD;&#xA;&#xD;&#xA;For Each row As DataRow In in_dtFinalTable.Rows&#xD;&#xA;&#x9;out_strHtmlReport += &quot;&lt;tr&gt;&quot;&#xD;&#xA;&#x9;For Each col As DataColumn In in_dtFinalTable.Columns&#xD;&#xA;&#x9;&#x9;out_strHtmlReport += &quot;&lt;td&gt;&quot; + If(row(col.ColumnName) IsNot Nothing, row(col.ColumnName).ToString(), &quot;&quot;) + &quot;&lt;/td&gt;&quot;&#xD;&#xA;&#x9;Next&#xD;&#xA;&#x9;out_strHtmlReport += &quot;&lt;/tr&gt;&quot;&#xD;&#xA;Next&#xD;&#xA;&#xD;&#xA;out_strHtmlReport += &quot;&lt;/table&gt;&quot;&#xD;&#xA;out_strHtmlReport += &quot;&lt;div id='easterEgg'&gt;👀 Gratulacje, odkryłeś ukrytą lokację w raporcie! 👀 &lt;br&gt;W nagrodę — możliwość powołania nowego bohatera do drużyny automatyzacji.&lt;/div&gt;&quot;&#xD;&#xA;out_strHtmlReport += &quot;&lt;/body&gt;&lt;/html&gt;&quot;" DisplayName="Invoke Code - str_HtmlReport" sap:VirtualizedContainerService.HintSize="575,197" sap2010:WorkflowViewState.IdRef="InvokeCode_2">
+    <ui:InvokeCode ContinueOnError="{x:Null}" Code="out_strHtmlReport =&#x9;&quot;&lt;html&gt;&lt;head&gt;&lt;style&gt;&quot; + _&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&quot;table {border-collapse: collapse; width: 100%;}&quot; + _&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&quot;th, td {border: 1px solid black; padding: 5px; text-align: left;}&quot; + _&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&quot;th {background-color: #f2f2f2;}&quot; + _&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&quot;#easterEgg {display: none; color: #888; font-style: italic; text-align: center; margin-top: 15px;}&quot; + _&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&quot;body:hover #easterEgg {display: block;}&quot; + _&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&quot;&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&quot;&#xA;&#xA;out_strHtmlReport += &quot;&lt;h1&gt;&lt;center&gt;Raport&lt;/center&gt;&lt;/h1&gt;&quot;&#xA;out_strHtmlReport += &quot;&lt;table&gt;&quot;&#xA;&#xA;out_strHtmlReport += &quot;&lt;tr&gt;&quot;&#xA;For Each col As DataColumn In in_dtFinalTable.Columns&#xA;&#x9;out_strHtmlReport += &quot;&lt;th&gt;&quot; + col.ColumnName + &quot;&lt;/th&gt;&quot;&#xA;Next&#xA;out_strHtmlReport += &quot;&lt;/tr&gt;&quot;&#xA;&#xA;For Each row As DataRow In in_dtFinalTable.Rows&#xA;&#x9;out_strHtmlReport += &quot;&lt;tr&gt;&quot;&#xA;&#x9;For Each col As DataColumn In in_dtFinalTable.Columns&#xA;&#x9;&#x9;out_strHtmlReport += &quot;&lt;td&gt;&quot; + If(row(col.ColumnName) IsNot Nothing, row(col.ColumnName).ToString(), &quot;&quot;) + &quot;&lt;/td&gt;&quot;&#xA;&#x9;Next&#xA;&#x9;out_strHtmlReport += &quot;&lt;/tr&gt;&quot;&#xA;Next&#xA;&#xA;out_strHtmlReport += &quot;&lt;/table&gt;&quot;&#xA;out_strHtmlReport += &quot;&lt;div id='easterEgg'&gt;👀 Gratulacje, odkryłeś ukrytą lokację w raporcie! 👀 &lt;br&gt;W nagrodę — możliwość powołania nowego bohatera do drużyny automatyzacji.&lt;/div&gt;&quot;&#xA;out_strHtmlReport += &quot;&lt;/body&gt;&lt;/html&gt;&quot;" DisplayName="Invoke Code - str_HtmlReport" sap:VirtualizedContainerService.HintSize="575,197" sap2010:WorkflowViewState.IdRef="InvokeCode_2">
       <ui:InvokeCode.Arguments>
-        <OutArgument x:TypeArguments="x:String" x:Key="out_strHtmlReport">
-          <VisualBasicReference x:TypeArguments="x:String" ExpressionText="str_HtmlReport" />
-        </OutArgument>
-        <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dtFinalTable">
-          <VisualBasicValue x:TypeArguments="sd:DataTable" ExpressionText="in_dtFinalTable" />
-        </InArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="out_strHtmlReport">[str_HtmlReport]</OutArgument>
+        <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dtFinalTable">[in_dtFinalTable]</InArgument>
       </ui:InvokeCode.Arguments>
     </ui:InvokeCode>
     <ui:WriteTextFile File="{x:Null}" Output="{x:Null}" DisplayName="Write Text File - str_HtmlReport" FileName="[str_FinalExcelFilePath.Replace(&quot;.xlsx&quot;,&quot;.html&quot;)]" sap:VirtualizedContainerService.HintSize="575,176" sap2010:WorkflowViewState.IdRef="WriteTextFile_1" Text="[str_HtmlReport]" />
